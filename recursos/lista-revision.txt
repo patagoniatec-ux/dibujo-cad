@@ -1,0 +1,14 @@
+LISTA DE REVISIÓN · DIBUJO TÉCNICO + CAD
+
+[ ] Identifiqué nombre, curso, título y fecha.
+[ ] Usé el formato solicitado.
+[ ] La escala está indicada y verificada.
+[ ] Plantas, cortes y fachadas son coherentes.
+[ ] Las cotas son legibles y no se contradicen.
+[ ] Distinguí los tipos de línea.
+[ ] Comprobé unidades, capas y espesores en CAD.
+[ ] Revisé el PDF final antes de entregar.
+[ ] Contrasté las sugerencias de IA con la consigna.
+[ ] Puedo explicar mis decisiones de representación.
+
+Guía didáctica propia. Seguí las indicaciones del docente y las normas aplicables.

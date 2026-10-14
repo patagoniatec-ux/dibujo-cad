@@ -1,0 +1,169 @@
+{
+  "settings": {
+    "title": "Dibujo Técnico + CAD",
+    "email": "patagoniatec@gmail.com",
+    "instagram": "",
+    "classTitle": "Plantas, cortes y acotación",
+    "classDescription": "Propuesta inicial para 3.º año. El docente confirmará el tema, las consignas y las fechas de entrega.",
+    "classDate": "",
+    "classBody": "Relacionar la planta con sus cortes y fachadas. Identificar espesores de muro, aberturas y cotas. Revisar que cada representación describa el mismo proyecto.",
+    "classConfirmed": false
+  },
+  "activities": [
+    {
+      "id": "trazados-1",
+      "title": "Lámina 01 · Trazados y tipos de línea",
+      "course": "1.º año",
+      "category": "Dibujo manual",
+      "description": "Una práctica inicial de paralelas, perpendiculares y organización de la lámina A3.",
+      "body": "Propuesta de práctica, pendiente de asignación docente.\n\n1. Prepará el marco y el rótulo según la consigna del curso.\n2. Dibujá tres conjuntos de rectas paralelas con separaciones de 5, 10 y 15 mm.\n3. Trazá perpendiculares utilizando las escuadras.\n4. Prepará un pequeño muestrario de líneas y explicá qué representaría cada una.\n\nAntes de entregar: revisá limpieza, precisión, uniformidad de líneas y datos del rótulo. Consultá la guía del docente para los espesores y convenciones.",
+      "url": "recursos/plantilla-a3.svg",
+      "linkLabel": "Descargar plantilla A3",
+      "date": "",
+      "image": ""
+    },
+    {
+      "id": "plantas-3",
+      "title": "Lámina 02 · Planta, cortes y fachada",
+      "course": "3.º año",
+      "category": "Representación arquitectónica",
+      "description": "Conectá las vistas de un mismo proyecto y revisá su acotación.",
+      "body": "Propuesta de práctica, pendiente de asignación docente.\n\n1. Trabajá con la planta de vivienda provista por el docente.\n2. Indicá dos líneas de corte y dibujá los cortes correspondientes.\n3. Representá una fachada y cotejá las aberturas con la planta.\n4. Incorporá las cotas solicitadas, sin repetir información innecesaria.\n\nAutoevaluación: ¿coinciden las aberturas?, ¿se reconoce el recorrido de cada corte?, ¿hay información suficiente para interpretar el proyecto?, ¿se lee bien a la escala de impresión?",
+      "url": "",
+      "date": "",
+      "image": ""
+    },
+    {
+      "id": "cad-capas",
+      "title": "Práctica CAD · Capas y presentación",
+      "course": "3.º año",
+      "category": "AutoCAD",
+      "description": "Organizá un archivo en capas y prepará una presentación para imprimir.",
+      "body": "Propuesta de práctica.\n\n1. Dibujá en tamaño real con una unidad de trabajo definida.\n2. Separá muros, carpinterías, cotas y textos en capas.\n3. Asigná tipos de línea y espesores siguiendo la consigna.\n4. Armá una presentación A3 con una ventana gráfica a la escala indicada.\n5. Exportá un PDF y comprobá su legibilidad.\n\nEntregable sugerido: archivo CAD y PDF. La fecha y la versión del formato serán definidas por el docente.",
+      "url": "",
+      "date": "",
+      "image": ""
+    }
+  ],
+  "library": [
+    {
+      "id": "iram-manual",
+      "title": "Manual de normas IRAM para Dibujo Técnico",
+      "category": "Normas IRAM",
+      "course": "Todos",
+      "description": "Consulta externa del PDF alojado por la Municipalidad de Villa Constitución. Verificá edición y vigencia con el docente.",
+      "url": "https://villaconstitucion.gob.ar/wp-content/uploads/2024/01/NORMAS-IRAM-para-Dibujo-Tecnico.pdf",
+      "body": "El enlace permite consultar una copia disponible en una fuente externa. No sustituye la consulta de las normas vigentes de IRAM.",
+      "date": "",
+      "image": ""
+    },
+    {
+      "id": "iram-oficial",
+      "title": "Normas oficiales · IRAM",
+      "category": "Normas IRAM",
+      "course": "Todos",
+      "description": "Acceso a la información oficial para consultar y adquirir normas.",
+      "url": "https://www.iram.org.ar/venta-de-normas/",
+      "body": "Consultá la edición aplicable antes de usar una norma como referencia.",
+      "date": "",
+      "image": ""
+    },
+    {
+      "id": "plantilla",
+      "title": "Plantilla A3 horizontal · editable",
+      "category": "Plantillas",
+      "course": "Todos",
+      "description": "Archivo SVG de 420 × 297 mm, con marco y rótulo para adaptar a la consigna.",
+      "url": "recursos/plantilla-a3.svg",
+      "body": "Plantilla didáctica propia. Ajustá el rótulo y el marco a las indicaciones de tu docente. Imprimí al 100 % para conservar el tamaño.",
+      "date": "",
+      "image": ""
+    },
+    {
+      "id": "revision",
+      "title": "Lista de revisión de una lámina",
+      "category": "Guías",
+      "course": "Todos",
+      "description": "Una guía breve para revisar representación, cotas, escala y entrega.",
+      "url": "recursos/lista-revision.txt",
+      "body": "Revisá tu trabajo con esta lista antes de presentarlo.",
+      "date": "",
+      "image": ""
+    }
+  ],
+  "tutorials": [
+    {
+      "id": "autocad",
+      "title": "AutoCAD · Del dibujo a la impresión",
+      "category": "AutoCAD",
+      "course": "3.º año",
+      "description": "Unidades, capas, dibujo en tamaño real y presentación.",
+      "body": "Ruta de práctica sugerida:\n1. Definí las unidades del archivo.\n2. Prepará las capas del proyecto.\n3. Construí la geometría con referencias precisas.\n4. Agregá cotas y textos legibles.\n5. Prepará la presentación y comprobá el PDF.\n\nLos nombres de las herramientas y sus ubicaciones pueden variar según la versión. Usá la documentación correspondiente a tu instalación.",
+      "url": "https://www.autodesk.com/learn/catalog/autocad",
+      "image": "assets/cad.webp",
+      "date": ""
+    },
+    {
+      "id": "sketchup",
+      "title": "SketchUp · Del plano al volumen",
+      "category": "SketchUp",
+      "course": "3.º año",
+      "description": "Aprendé a organizar la geometría y presentar un modelo.",
+      "body": "Ruta de práctica sugerida:\n1. Comprobá las unidades y una medida conocida del plano.\n2. Dibujá un contorno cerrado.\n3. Generá el volumen.\n4. Separá objetos en grupos o componentes.\n5. Prepará escenas para explicar tu proyecto.\n\nCompará las dimensiones del modelo con la planta original.",
+      "url": "https://help.sketchup.com/en/sketchup/getting-started-sketchup",
+      "image": "assets/modelo.webp",
+      "date": ""
+    },
+    {
+      "id": "max",
+      "title": "3ds Max · Modelar, iluminar y comunicar",
+      "category": "3ds Max",
+      "course": "Todos",
+      "description": "Una ruta inicial para trabajar con escenas, materiales y renders.",
+      "body": "Ruta de práctica sugerida:\n1. Definí las unidades de la escena.\n2. Creá o importá una geometría sencilla.\n3. Organizá y nombrá los objetos.\n4. Probá materiales e iluminación.\n5. Elegí una cámara y prepará una imagen que explique el proyecto.\n\nPrimero comprobá las dimensiones y la forma; después trabajá la presentación visual.",
+      "url": "https://www.autodesk.com/learn/catalog/3ds%20max",
+      "image": "assets/modelo.webp",
+      "date": ""
+    }
+  ],
+  "news": [
+    {
+      "id": "inicio-sketchup",
+      "title": "SketchUp: una guía para empezar",
+      "category": "SketchUp",
+      "course": "Todos",
+      "description": "La guía oficial reúne recursos de instalación, interfaz y primeros pasos para organizar el aprendizaje.",
+      "body": "Para el aula: usá la documentación oficial como punto de partida y prepará un modelo sencillo con dimensiones verificables.\n\nActividad sugerida: modelar un ambiente, crear una escena y comparar sus medidas con la planta.\n\nFuente consultada el 14 de octubre de 2026. Es un recurso de aprendizaje, no un anuncio de nueva versión.",
+      "url": "https://help.sketchup.com/en/sketchup/getting-started-sketchup",
+      "image": "assets/modelo.webp",
+      "date": "2026-10-14",
+      "kind": "Recurso"
+    },
+    {
+      "id": "orden-cad",
+      "title": "Antes de imprimir: revisá tu archivo CAD",
+      "category": "CAD",
+      "course": "3.º año",
+      "description": "Cinco comprobaciones para presentar un plano claro: unidades, capas, cotas, escala y PDF.",
+      "body": "Guía propia del aula.\n\n1. Comprobá una dimensión conocida y las unidades.\n2. Revisá que cada objeto esté en la capa correcta.\n3. Eliminá cotas ambiguas o contradictorias.\n4. Verificá la escala de la ventana gráfica.\n5. Abrí el PDF exportado y comprobá su tamaño y legibilidad.\n\nActividad sugerida: intercambiá el PDF con un compañero y pedile que identifique tres medidas sin consultar el CAD.",
+      "url": "",
+      "image": "assets/cad.webp",
+      "date": "2026-10-14",
+      "kind": "Guía del aula"
+    },
+    {
+      "id": "recorridos",
+      "title": "Del modelo 3D al recorrido virtual",
+      "category": "Realidad virtual",
+      "course": "Todos",
+      "description": "Planificá un recorrido para explicar espacios, circulaciones y decisiones de diseño.",
+      "body": "Propuesta didáctica propia.\n\nElegí tres lugares del proyecto que quieras explicar. Prepará escenas o vistas desde esos puntos y relacioná cada una con la planta.\n\nPodés comenzar con imágenes y un recorrido en pantalla. Si hay un equipo de realidad virtual disponible, el docente evaluará la herramienta y la compatibilidad del modelo.\n\nRevisión: el recorrido ayuda a comprender el espacio, pero las dimensiones deben verificarse en el plano y en el modelo.",
+      "url": "",
+      "image": "assets/vr.webp",
+      "date": "2026-10-14",
+      "kind": "Propuesta"
+    }
+  ],
+  "services": [],
+  "gallery": []
+}
