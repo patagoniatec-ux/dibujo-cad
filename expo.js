@@ -1,4 +1,4 @@
-import {dataReady,esc,safeURL} from './app.js';
+import {dataReady,esc,safeURL} from './app.js?v=expo-2';
 const $=id=>document.getElementById(id);
 const norm=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('es');
 const dialog=document.createElement('dialog');dialog.className='expo-view';document.body.append(dialog);
