@@ -128,6 +128,19 @@
   ],
   "news": [
     {
+      "id": "instagram-De4aDMGD2Gq",
+      "title": "Video de Instagram · Dibujo Técnico",
+      "category": "Dibujo técnico",
+      "course": "Todos",
+      "description": "Un video seleccionado por el profesor Marcelo Colombo para compartir en el aula de Dibujo Técnico.",
+      "body": "Mirá la publicación original en el visor o abrila en Instagram con el botón de abajo.",
+      "url": "https://www.instagram.com/p/De4aDMGD2Gq/",
+      "linkLabel": "Ver en Instagram",
+      "image": "",
+      "date": "2026-10-30",
+      "kind": "Video"
+    },
+    {
       "id": "inicio-sketchup",
       "title": "SketchUp: una guía para empezar",
       "category": "SketchUp",
