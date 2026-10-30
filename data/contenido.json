@@ -165,5 +165,21 @@
     }
   ],
   "services": [],
-  "gallery": []
+  "gallery": [
+    {
+      "id": "carrillo-2cb-2026",
+      "title": "Carrillo · Planta de vivienda y baño a distintas escalas",
+      "student": "Carrillo",
+      "course": "2.º año · Ciclo básico",
+      "category": "Dibujo manual",
+      "kind": "Trabajo del aula",
+      "description": "Dos láminas de Carrillo: planta de vivienda amueblada y representación de un baño a distintas escalas.",
+      "body": "Trabajo de 2.º año del ciclo básico. Dibujo a mano con distribución de ambientes, mobiliario, cotas y rótulo. La segunda lámina compara la representación de un baño a escalas 1:200, 1:50 y 1:20. Abrí el visor para recorrer las dos fotografías y ampliar los detalles.",
+      "date": "",
+      "image": "assets/trabajos/carrillo/vivienda.jpg",
+      "imageRotation": -90,
+      "url": "trabajo-carrillo.html",
+      "linkLabel": "Ver las dos láminas y ampliar"
+    }
+  ]
 }
