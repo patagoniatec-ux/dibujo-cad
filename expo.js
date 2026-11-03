@@ -11,7 +11,7 @@ const image=safeURL(item.image),url=safeURL(item.url);
 dialog.innerHTML=`<div class="expo-toolbar"><h2>${esc(item.student||item.title)}</h2><button class="small-btn" id="expo-close" aria-label="Cerrar lámina">Cerrar ×</button></div><p>${esc(item.course)}${item.description?' · '+esc(item.description):''}</p><div class="expo-toolbar"><label>Ampliar <input id="expo-zoom" type="range" min="50" max="300" step="25" value="100"></label><output id="expo-percent">100 %</output><button class="small-btn" id="expo-reset">Ajustar</button><button class="small-btn" id="expo-full">Pantalla completa</button>${url?`<a class="button secondary" href="${esc(url)}" target="_blank" rel="noopener">Ver PDF / más láminas ↗</a>`:''}</div><div class="expo-stage" id="expo-stage"><img id="expo-photo" src="${esc(image)}" alt="${esc(item.title)}"></div>`;
 dialog.showModal();$('expo-close').onclick=close;
 const photo=$('expo-photo'),stage=$('expo-stage');
-const fit=()=>{const rotated=item.imageRotation===-90;photo.style.width=zoom+'%';photo.style.transform='';$('expo-zoom').value=zoom;$('expo-percent').textContent=zoom+' %'};
+const fit=()=>{const rotated=item.imageRotation===-90;photo.style.width=zoom+'%';photo.style.transform=item.imageRotation===180?'rotate(180deg)':'';$('expo-zoom').value=zoom;$('expo-percent').textContent=zoom+' %'};
 $('expo-zoom').oninput=e=>{zoom=Number(e.target.value);fit()};
 $('expo-reset').onclick=()=>{zoom=100;fit();stage.scrollTo(0,0)};
 $('expo-full').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await dialog.requestFullscreen()}catch{$('expo-full').textContent='Usá ampliar para recorrer la lámina'}};
@@ -24,7 +24,7 @@ function render(){
 const query=norm($('search').value),course=$('course').value;
 const visible=items.filter(x=>(!course||x.course===course)&&norm([x.student,x.title,x.description,x.body,x.course].join(' ')).includes(query));
 $('result-count').textContent=visible.length+' '+(visible.length===1?'trabajo':'trabajos');
-$('listing').innerHTML=visible.map(x=>`<article class="card"><img src="${esc(safeURL(x.image))}" alt="${esc(x.title)}" loading="lazy"><div><h2 class="student-name">${esc(x.student||x.title)}</h2><span class="tag">${esc(x.course||'Dibujo Técnico')}</span><p>${esc(x.description||x.title)}</p><button class="button secondary" data-expo="${esc(x.id)}">Ver y ampliar lámina →</button></div></article>`).join('')||'<p class="empty">No encontramos trabajos. Probá con otro nombre o curso.</p>';
+$('listing').innerHTML=visible.map(x=>`<article class="card"><img ${x.imageRotation===180?'style="transform:rotate(180deg)"':''} src="${esc(safeURL(x.image))}" alt="${esc(x.title)}" loading="lazy"><div><h2 class="student-name">${esc(x.student||x.title)}</h2><span class="tag">${esc(x.course||'Dibujo Técnico')}</span><p>${esc(x.description||x.title)}</p><button class="button secondary" data-expo="${esc(x.id)}">Ver y ampliar lámina →</button></div></article>`).join('')||'<p class="empty">No encontramos trabajos. Probá con otro nombre o curso.</p>';
 $('listing').querySelectorAll('[data-expo]').forEach(b=>b.onclick=()=>open(items.find(x=>x.id===b.dataset.expo)));
 }
 $('search').oninput=render;$('course').onchange=render;render();

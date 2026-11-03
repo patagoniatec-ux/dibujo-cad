@@ -193,6 +193,34 @@
       "imageRotation": -90,
       "url": "trabajo-carrillo.html",
       "linkLabel": "Ver las dos láminas y ampliar"
+    },
+    {
+      "id": "vivienda-ingles-expo-2026-1",
+      "title": "Vivienda · Dibujo Técnico + Inglés · Lámina 1",
+      "course": "1.º año · Ciclo superior · Construcciones",
+      "category": "Representación arquitectónica",
+      "kind": "Trabajo del aula",
+      "description": "Planta de vivienda amueblada y acotada, con identificación de ambientes en español e inglés.",
+      "body": "Articulación Dibujo Técnico e Inglés · CET Nº33. Producción estudiantil para la Expo 2026. Autoría indicada en el rótulo de la lámina.",
+      "date": "",
+      "image": "assets/trabajos/vivienda-ingles/vivienda-1.jpg",
+      "imageRotation": 180,
+      "url": "",
+      "linkLabel": ""
+    },
+    {
+      "id": "vivienda-ingles-expo-2026-2",
+      "title": "Vivienda · Dibujo Técnico + Inglés · Lámina 2",
+      "course": "1.º año · Ciclo superior · Construcciones",
+      "category": "Representación arquitectónica",
+      "kind": "Trabajo del aula",
+      "description": "Planta de vivienda amueblada y acotada, con identificación de ambientes en español e inglés.",
+      "body": "Articulación Dibujo Técnico e Inglés · CET Nº33. Producción estudiantil para la Expo 2026. Autoría indicada en el rótulo de la lámina.",
+      "date": "",
+      "image": "assets/trabajos/vivienda-ingles/vivienda-2.jpg",
+      "imageRotation": 180,
+      "url": "",
+      "linkLabel": ""
     }
   ]
 }
