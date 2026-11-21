@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Del croquis a mano alzada al modelo BIM en Revit: interpretación, modelado y documentación técnica con IA.">
+<meta name="theme-color" content="#506952"><title>Del croquis a Revit · Dibujo Técnico + CAD</title>
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css">
+<style>
+.revit-hero{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin:0 0 36px}
+.revit-hero .paper{background:#f1f4f0}.visual{border:1px solid var(--line);background:#fff;padding:14px;border-radius:4px}
+.visual svg{width:100%;height:auto;display:block;stroke:#27382d;stroke-width:1.5;fill:none}
+.visual figcaption{font-size:12px;color:var(--muted);padding:10px 4px 0}
+.revit-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin:28px 0}
+.revit-card{border:1px solid var(--line);padding:20px;background:#fff}
+.revit-card h2{font-size:25px;margin:12px 0}
+.revit-card p{font-size:14px;color:var(--muted)}
+.stage{display:inline-block;color:var(--green);font-size:11px;letter-spacing:1.2px;text-transform:uppercase}
+.workflow{counter-reset:step;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:22px 0 36px}
+.workflow article{background:var(--tint);padding:20px}
+.workflow article:before{counter-increment:step;content:"0" counter(step);color:var(--green);font-size:13px}
+.workflow h3{font-size:20px;margin:10px 0}
+.workflow p{font-size:13px;margin:0;color:var(--muted)}
+.disclaimer{border-left:3px solid #9a7a37;background:#f8f5ec;padding:17px 20px;font-size:14px}
+.reference-links{display:flex;flex-wrap:wrap;gap:18px;margin:16px 0 34px}
+@media(max-width:800px){.revit-hero{grid-template-columns:1fr}.workflow{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.revit-grid{grid-template-columns:1fr}.workflow{grid-template-columns:1fr}}
+</style>
+</head>
+<body id="top" data-page="revit">
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header><div class="wrap head">
+<a class="brand" href="index.html"><svg viewBox="0 0 46 46" aria-hidden="true"><path d="M4 35h42M8 35V10l13-2 17 9v18M21 3v40l7-5V1l-7 2M21 8v27"/></svg><span>DIBUJO TÉCNICO <b>+ CAD</b></span></a>
+<button class="menu" aria-expanded="false" aria-controls="nav">Menú ☰</button>
+<nav id="nav" aria-label="Principal"><a href="index.html">Inicio</a><a href="actividades.html">Actividades</a><a href="biblioteca.html">Biblioteca</a><a href="noticias.html">Novedades</a><a href="consultas.html">Consultas</a></nav>
+<a class="admin-link" href="administrar.html"><svg viewBox="0 0 46 46" aria-hidden="true"><circle cx="21" cy="21" r="6"/><path d="m18 4 6 0 1 6 5 2 5-3 4 5-4 5 0 5 4 4-4 5-5-2-5 2-1 6h-6l-1-6-5-2-5 2-4-5 4-4v-5l-4-5 4-5 5 3 5-2z"/></svg><span>Administrar</span></a>
+</div></header>
+<main id="contenido">
+<section class="page-heading wrap"><a class="back" href="ia.html">← Volver a IA aplicada al dibujo</a><p class="eyebrow">Del papel al modelo digital</p><h1>Del croquis a Revit</h1><p class="intro">Una propuesta de trabajo con IA y metodología BIM: interpretar un croquis acotado, construir un modelo y preparar documentación técnica que pueda revisarse.</p></section>
+<section class="wrap">
+<div class="revit-hero">
+<article class="paper"><p class="eyebrow">La idea central</p><h2>Vos hacés el croquis. La IA ayuda a convertirlo en un proyecto documentado.</h2>
+<p>Partimos de una fotografía o escaneo de una planta dibujada a mano. Primero se leen las cotas y se aclaran las dudas; después se define la geometría y se construye el modelo en Revit mediante herramientas de automatización compatibles.</p>
+<p>El objetivo no es “adivinar” el plano: es conservar las medidas, detectar datos faltantes y dejar cada decisión lista para revisión profesional.</p></article>
+<figure class="visual">
+<svg viewBox="0 0 640 410" role="img" aria-label="Esquema ilustrativo de una planta arquitectónica acotada dibujada a mano">
+<rect x="8" y="8" width="624" height="394" rx="5" fill="#fbfaf5" stroke="#d8d3c8"/>
+<g stroke="#4d514c" stroke-width="4" stroke-linecap="square">
+<path d="M115 92H490V320H115Z M270 92V220 M115 220H490 M365 220V320"/>
+<path d="M270 92v42 M270 166v54 M115 220h38 M192 220h78 M365 220h36 M440 220h50"/>
+</g>
+<g stroke="#8c6e53" stroke-width="1.4" fill="none"><path d="M115 65H490 M115 57v16 M490 57v16 M92 92V320 M84 92h16 M84 320h16 M270 72v20 M365 200v20"/></g>
+<g fill="#60594f" stroke="none" font-family="Arial" font-size="15"><text x="290" y="53">8,40 m</text><text x="40" y="210" transform="rotate(-90 40 210)">5,60 m</text><text x="160" y="165">ESTAR</text><text x="300" y="165">COCINA</text><text x="170" y="278">DORMITORIO</text><text x="390" y="278">BAÑO</text><text x="118" y="350">Croquis de referencia · cotas a verificar</text></g>
+<g stroke="#b35e45" stroke-width="1.5" fill="none"><path d="M130 92q20 20 0 40 M270 136q28 0 28 28 M365 236q28 0 28 28"/></g>
+<g fill="#b35e45" stroke="none" font-family="Arial" font-size="12"><text x="505" y="94">N</text><text x="505" y="112">↑</text></g>
+</svg>
+<figcaption>Ejemplo didáctico de croquis acotado. Las medidas y la distribución son ficticias: no corresponden a un proyecto construido.</figcaption>
+</figure>
+</div>
+<h2>El recorrido de trabajo</h2>
+<div class="workflow">
+<article><h3>Recibir el croquis</h3><p>Foto nítida, cotas generales y parciales, espesores, niveles y referencias.</p></article>
+<article><h3>Interpretar y consultar</h3><p>Ordenar medidas, detectar contradicciones y preguntarte lo que no se puede deducir.</p></article>
+<article><h3>Modelar en BIM</h3><p>Crear niveles, muros, aberturas, losas y componentes según las decisiones aprobadas.</p></article>
+<article><h3>Documentar y revisar</h3><p>Preparar vistas, cortes, fachadas, cotas, planillas y láminas; comprobar coherencia.</p></article>
+</div>
+<h2>¿Qué podría mostrar el proyecto terminado?</h2>
+<div class="revit-grid">
+<article class="revit-card"><span class="stage">01 · Planta</span><figure class="visual"><svg viewBox="0 0 560 300" role="img" aria-label="Planta arquitectónica vectorial de ejemplo"><rect x="20" y="20" width="520" height="260" fill="#fafbf9" stroke="#e1e5e0"/><g stroke="#27382d" stroke-width="9" fill="none"><path d="M90 60H465V240H90Z M280 60V165 M90 165H465 M365 165V240"/></g><g stroke="#fafbf9" stroke-width="11"><path d="M280 90v45 M160 165h50 M410 165h35 M365 195v30"/></g><g stroke="#526f91" stroke-width="2" fill="none"><path d="M280 90q45 0 45 45 M160 165q0 45 50 45 M410 165q0 35 35 35"/></g><g fill="#526052" stroke="none" font-size="14" font-family="Arial"><text x="150" y="115">ESTAR</text><text x="335" y="115">COCINA</text><text x="155" y="210">DORMITORIO</text><text x="400" y="210">BAÑO</text></g></svg><figcaption>Vista esquemática de planta con ambientes y aberturas.</figcaption></figure><h2>Planta arquitectónica</h2><p>Distribución, espesores, puertas, ventanas, cotas y niveles. Las cotas deben coincidir con el croquis validado.</p></article>
+<article class="revit-card"><span class="stage">02 · Modelo</span><figure class="visual"><svg viewBox="0 0 560 300" role="img" aria-label="Axonometría ilustrativa de un modelo BIM"><path d="M75 190 275 80 485 190 280 280Z" fill="#e9eee8" stroke="#405444" stroke-width="2"/><path d="M75 190V95l200-110v95Z" fill="#dce6dc" stroke="#405444" stroke-width="2"/><path d="M275 80V-15l210 110v95Z" fill="#f0f3ef" stroke="#405444" stroke-width="2"/><path d="M75 95 280 205 485 95" fill="none" stroke="#405444" stroke-width="2"/><path d="M160 142V80l42-23v62 M320 103V45l40 22v58 M365 240v-65l52-29v65" fill="#b8c8bd" stroke="#405444" stroke-width="2"/><path d="M75 190 275 80 485 190 280 280Z" fill="none" stroke="#405444" stroke-width="2"/></svg><figcaption>Axonometría conceptual. No es una captura de Revit ni un modelo ejecutado.</figcaption></figure><h2>Modelo BIM 3D</h2><p>Volumetría y componentes constructivos organizados por niveles y categorías, con parámetros editables.</p></article>
+<article class="revit-card"><span class="stage">03 · Documentación</span><figure class="visual"><svg viewBox="0 0 560 300" role="img" aria-label="Lámina técnica esquemática con planta, corte y fachada"><rect x="30" y="18" width="500" height="264" fill="#fff" stroke="#33483a" stroke-width="2"/><g stroke="#526052" fill="none" stroke-width="2"><rect x="50" y="38" width="210" height="125"/><path d="M65 52H240V148H65Z M150 52v96 M65 100h175"/><rect x="285" y="38" width="225" height="125"/><path d="M300 140V95l90-48 100 48v45Z M300 95h190 M390 47v93"/><rect x="50" y="180" width="210" height="78"/><path d="M65 238V200h175v38 M65 200l88-28 87 28"/></g><g stroke="#9a704e" stroke-width="1" fill="none"><path d="M50 170H260 M275 170H510"/></g><g fill="#33483a" stroke="none" font-size="11" font-family="Arial"><text x="50" y="274">PLANTA</text><text x="285" y="274">CORTE / FACHADA</text><text x="400" y="260">LÁMINA A3 · ESQUEMA</text></g></svg><figcaption>Composición ilustrativa de una lámina de documentación.</figcaption></figure><h2>Láminas técnicas</h2><p>Plantas, cortes, fachadas, detalles y planillas organizadas en hojas para exportar a PDF.</p></article>
+<article class="revit-card"><span class="stage">04 · Interfaz</span><figure class="visual"><svg viewBox="0 0 560 300" role="img" aria-label="Representación esquemática de una interfaz BIM con modelo 3D"><rect x="8" y="8" width="544" height="284" rx="4" fill="#e8ecef" stroke="#65717a"/><rect x="8" y="8" width="544" height="30" fill="#34434b"/><g fill="#fff" stroke="none" font-size="11" font-family="Arial"><text x="22" y="27">PROYECTO BIM · VISTA 3D</text></g><rect x="8" y="38" width="544" height="36" fill="#d3dbe0" stroke="#aeb9bf"/><g stroke="#87959d" fill="none"><path d="M24 49h28v15H24z M66 49h28v15H66z M108 49h28v15h-28z M150 49h28v15h-28z"/></g><rect x="8" y="74" width="112" height="208" fill="#f5f7f8" stroke="#aeb9bf"/><g fill="#44545c" stroke="none" font-size="10" font-family="Arial"><text x="18" y="94">PROPIEDADES</text><text x="18" y="116">Nivel 1</text><text x="18" y="135">Muros</text><text x="18" y="154">Puertas</text><text x="18" y="173">Ventanas</text><text x="18" y="192">Vistas</text></g><rect x="120" y="74" width="432" height="208" fill="#f9fbfc"/><path d="M160 220 310 140 490 220 340 275Z" fill="#d9e2dc" stroke="#506952" stroke-width="2"/><path d="M160 220V142l150-82v80Z" fill="#e8eee9" stroke="#506952" stroke-width="2"/><path d="M310 140V60l180 82v78Z" fill="#f0f3f0" stroke="#506952" stroke-width="2"/><path d="M225 184v-40l32-18v40 M365 165v-40l40 18v40" fill="#b9c9bf" stroke="#506952" stroke-width="2"/></svg><figcaption>Maqueta visual de una pantalla de trabajo BIM. Es una ilustración creada para explicar el proceso; no es una captura real del programa.</figcaption></figure><h2>Pantalla de trabajo</h2><p>Una vista de referencia para reconocer el navegador del proyecto, las propiedades y el área de modelado. La interfaz real depende de la versión de Revit.</p></article>
+</div>
+<h2>Documentación que podemos preparar</h2>
+<div class="paper"><div class="two-col">
+<div><h3>Arquitectura</h3><ul><li>Planta general y de cotas</li><li>Planta de replanteo</li><li>Cortes longitudinales y transversales</li><li>Fachadas y detalles</li><li>Planillas de aberturas y superficies</li></ul></div>
+<div><h3>Construcción y estructura</h3><ul><li>Plantas de fundaciones, cuando exista diseño validado</li><li>Plantas estructurales y detalles constructivos</li><li>Cuadros de cantidades y planillas</li><li>Hojas y láminas de impresión</li><li>Exportación y revisión de PDF</li></ul></div>
+</div><p class="notice">La documentación estructural y de fundaciones no se obtiene de forma segura solo a partir de una planta arquitectónica: requiere datos de suelo, cargas, criterios de cálculo, normativa y validación profesional.</p></div>
+<h2>¿Qué hace falta para empezar?</h2>
+<ol><li>Un croquis legible con al menos dos cotas generales y las cotas parciales disponibles.</li><li>Espesores de muros, alturas, niveles y ubicación de aberturas, si se conocen.</li><li>La versión de Revit y las familias o plantillas que se utilizarán.</li><li>Una instancia de automatización/MCP compatible, instalada y conectada al programa.</li><li>Revisión del modelo y de las láminas antes de considerarlas documentación válida.</li></ol>
+<div class="disclaimer"><strong>Importante sobre MCP:</strong> Autodesk publica un servidor MCP oficial para Revit 2027.2 en Technical Preview. La documentación indica conexión local y clientes de IA compatibles con MCP, como Claude Desktop y Cursor. No debemos prometer que ese servidor se conecta directamente a ChatGPT sin comprobar un puente o cliente compatible. Las herramientas de escritura pueden modificar el modelo, por eso conviene trabajar con copias y revisar los cambios.</div>
+<div class="reference-links"><a href="https://help.autodesk.com/view/ADSKMCP/ENU/?guid=ADSKMCP_RevitMcp_revit_mcp_server_html" target="_blank" rel="noopener">Documentación oficial Autodesk · Revit MCP ↗</a><a href="https://help.autodesk.com/view/ADSKMCP/ENU/?guid=ADSKMCP_RevitMcp_setting_up_revit_mcp_server_html" target="_blank" rel="noopener">Configuración del servidor MCP ↗</a></div>
+<article class="paper"><p class="eyebrow">Actividad para el aula</p><h2>Del croquis al BIM: primera práctica</h2><p>Elegí una planta sencilla. Marcá qué información está confirmada, qué falta y qué no puede deducirse. Antes de modelar, prepará una tabla de ambientes, medidas y aberturas. Después compará el modelo con el croquis y explicá cualquier diferencia.</p><a class="button" href="consultas.html">Consultar sobre esta práctica →</a></article>
+<p style="margin-top:28px"><a href="ia.html">← IA aplicada al dibujo</a> · <a href="index.html">Inicio del aula</a></p>
+</section></main>
+<footer><div class="wrap foot"><a class="brand" href="index.html"><svg viewBox="0 0 46 46" aria-hidden="true"><path d="M4 35h42M8 35V10l13-2 17 9v18M21 3v40l7-5V1l-7 2M21 8v27"/></svg><span>DIBUJO TÉCNICO <b>+ CAD</b></span></a><span class="foot-note">Aprender a representar. Comprobar. Crear.</span><a id="instagram" hidden target="_blank" rel="noopener">Instagram ↗</a><a href="#top" aria-label="Volver arriba">↑</a></div><div class="wrap legal">Marcelo Colombo · Aula virtual · Alto Valle, Río Negro</div></footer>
+<dialog id="detalle"><button class="close" aria-label="Cerrar detalle">×</button><div id="detalle-contenido"></div></dialog><script type="module" src="app.js"></script>
+</body></html>
