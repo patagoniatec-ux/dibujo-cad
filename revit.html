@@ -26,6 +26,7 @@
 @media(max-width:520px){.revit-grid{grid-template-columns:1fr}.workflow{grid-template-columns:1fr}}
 
 .inventor-section{margin:54px 0 42px;padding-top:34px;border-top:2px solid var(--line)}
+#foto-a-modelo-3d .inventor-banner{grid-template-columns:1fr 1fr}#foto-a-modelo-3d .inventor-visual svg{width:100%;height:auto;display:block}@media(max-width:800px){#foto-a-modelo-3d .inventor-banner{grid-template-columns:1fr}}
 .inventor-banner{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;margin:22px 0}
 .inventor-banner .paper{height:100%}
 .inventor-visual{border:1px solid var(--line);background:#f8faf8;padding:14px;border-radius:4px}
@@ -203,6 +204,47 @@
 </ol>
 <div class="inventor-note"><strong>Conexión con ChatGPT:</strong> ipt-mcp está diseñado para clientes MCP locales por stdio. Eso no significa que ChatGPT en el celular o en la nube pueda abrir directamente un proceso de Windows. Para usarlo desde ChatGPT directamente haría falta una pasarela remota compatible y segura; como primera prueba, el camino más directo es un cliente local en la misma PC que Inventor. No se debe publicar el puerto local de Inventor en Internet.</div>
 <div class="inventor-links"><a href="https://github.com/bimwright/ipt-mcp" target="_blank" rel="noopener">Repositorio ipt-mcp · BIMwright ↗</a><a href="https://github.com/bimwright/ipt-mcp/releases/latest" target="_blank" rel="noopener">Versiones e instaladores ↗</a><a href="https://github.com/bimwright/ipt-mcp/blob/master/ARCHITECTURE.md" target="_blank" rel="noopener">Arquitectura técnica ↗</a></div>
+</section>
+
+
+<section class="inventor-section" id="foto-a-modelo-3d">
+<p class="eyebrow">Herramienta de inteligencia artificial · Modelado 3D</p>
+<h2>De una fotografía a un modelo 3D: Tencent HY 3D Global</h2>
+<div class="inventor-banner">
+<article class="paper">
+<h3>¿Qué es?</h3>
+<p><strong><a href="https://hy3d.tencent.ai/" target="_blank" rel="noopener">Abrir Tencent HY 3D Global ↗</a></strong></p>
+<p>Es una herramienta de Tencent que permite generar modelos tridimensionales a partir de una imagen (Image-to-3D) o de una descripción escrita (Text-to-3D). También ofrece opciones de generación con varias vistas y herramientas de geometría y texturizado, según el modelo y el servicio disponible.</p>
+<p><strong>¿Para qué nos sirve?</strong> Para transformar una foto, un objeto de referencia o una idea en un primer modelo 3D que luego podemos revisar y continuar trabajando en un programa de modelado.</p>
+</article>
+<figure class="inventor-visual">
+<img src="https://staticintl.cloudcachetci.com/doc/pdf/product/pdf/1284_75276_en.pdf" alt="Documentación oficial de Tencent HY 3D Global" loading="lazy" style="display:none">
+<svg viewBox="0 0 620 300" role="img" aria-label="Flujo ilustrativo de una imagen que se transforma en un modelo tridimensional">
+<rect x="8" y="8" width="604" height="284" rx="5" fill="#f8faf8" stroke="#d7dfd8"/>
+<rect x="35" y="70" width="135" height="125" rx="5" fill="#e7eee8" stroke="#526952" stroke-width="2"/>
+<circle cx="102" cy="115" r="28" fill="#c4d4c7" stroke="#526952" stroke-width="2"/>
+<path d="M65 174l27-34 22 19 18-24 20 39" fill="none" stroke="#526952" stroke-width="3"/>
+<path d="M190 132h70m-12-10 12 10-12 10" fill="none" stroke="#9a704e" stroke-width="3"/>
+<path d="M300 175l90-52 90 52-90 52Z" fill="#dce8df" stroke="#405444" stroke-width="2"/>
+<path d="M300 175v-65l90-52v65Z" fill="#eef3ef" stroke="#405444" stroke-width="2"/>
+<path d="M390 123V58l90 52v65Z" fill="#b9cbbb" stroke="#405444" stroke-width="2"/>
+<path d="M350 152l40-23 40 23-40 23Z" fill="#f8faf8" stroke="#405444" stroke-width="2"/>
+<g fill="#405444" font-family="Arial" font-size="15"><text x="53" y="225">Foto o imagen</text><text x="280" y="255">Modelo 3D generado</text><text x="205" y="105">IA</text></g>
+</svg>
+<figcaption>Esquema didáctico del proceso imagen-a-3D; no es una captura de la plataforma.</figcaption>
+</figure>
+</div>
+<div class="inventor-grid">
+<article><h3>1. Image-to-3D</h3><p>Subir una fotografía o imagen de referencia para obtener una representación tridimensional. Una sola vista puede ocultar partes del objeto; varias vistas ayudan a describirlo mejor cuando la plataforma las admite.</p></article>
+<article><h3>2. Text-to-3D</h3><p>Describir el objeto, su forma, materiales y estilo para generar una propuesta 3D. Es útil para explorar ideas y crear referencias visuales.</p></article>
+<article><h3>3. Revisar y continuar</h3><p>Comprobar escala, proporciones, geometría, malla y formato de exportación antes de llevar el resultado a Blender, Inventor u otro programa.</p></article>
+</div>
+<div class="inventor-note"><strong>Evaluación para impresión 3D:</strong> es una buena herramienta para crear una primera forma o una referencia visual, pero no debemos considerar automáticamente que el modelo tenga medidas exactas, paredes con espesor correcto o una malla lista para imprimir. Antes de usarlo en la Ender 3 V2, hay que comprobar el archivo exportado, repararlo si hace falta y verificarlo en el laminador. La disponibilidad de créditos gratuitos, formatos de descarga y límites puede cambiar según la cuenta y el servicio.</div>
+<div class="inventor-links">
+<a href="https://hy3d.tencent.ai/" target="_blank" rel="noopener">Entrar a Tencent HY 3D Global ↗</a>
+<a href="https://intl.cloud.tencent.com/products/ai3d?lang=en" target="_blank" rel="noopener">Información oficial de Tencent HY 3D ↗</a>
+<a href="https://intl.cloud.tencent.com/document/product/1281/74119?lang=en" target="_blank" rel="noopener">Usos y aplicaciones documentados ↗</a>
+</div>
 </section>
 
 <article class="paper"><p class="eyebrow">Actividad para el aula</p><h2>Del croquis al BIM: primera práctica</h2><p>Elegí una planta sencilla. Marcá qué información está confirmada, qué falta y qué no puede deducirse. Antes de modelar, prepará una tabla de ambientes, medidas y aberturas. Después compará el modelo con el croquis y explicá cualquier diferencia.</p><a class="button" href="consultas.html">Consultar sobre esta práctica →</a></article>
