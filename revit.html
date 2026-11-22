@@ -24,6 +24,25 @@
 .reference-links{display:flex;flex-wrap:wrap;gap:18px;margin:16px 0 34px}
 @media(max-width:800px){.revit-hero{grid-template-columns:1fr}.workflow{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:520px){.revit-grid{grid-template-columns:1fr}.workflow{grid-template-columns:1fr}}
+
+.inventor-section{margin:54px 0 42px;padding-top:34px;border-top:2px solid var(--line)}
+.inventor-banner{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;margin:22px 0}
+.inventor-banner .paper{height:100%}
+.inventor-visual{border:1px solid var(--line);background:#f8faf8;padding:14px;border-radius:4px}
+.inventor-visual svg{width:100%;height:auto;display:block}
+.inventor-visual img{width:100%;height:auto;display:block}
+.inventor-visual figcaption{font-size:12px;color:var(--muted);padding:10px 4px 0}
+.inventor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:22px 0}
+.inventor-grid article{border:1px solid var(--line);padding:18px;background:#fff}
+.inventor-grid h3{font-size:19px;margin:12px 0 7px}
+.inventor-grid p{font-size:13px;color:var(--muted)}
+.inventor-specs{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:20px 0}
+.inventor-specs .paper{margin:0}
+.inventor-note{border-left:3px solid #9a7a37;background:#f8f5ec;padding:17px 20px;font-size:14px;margin:22px 0}
+.inventor-links{display:flex;flex-wrap:wrap;gap:16px;margin:16px 0 26px}
+@media(max-width:800px){.inventor-banner{grid-template-columns:1fr}.inventor-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.inventor-grid,.inventor-specs{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body id="top" data-page="revit">
@@ -79,6 +98,113 @@
 <ol><li>Un croquis legible con al menos dos cotas generales y las cotas parciales disponibles.</li><li>Espesores de muros, alturas, niveles y ubicación de aberturas, si se conocen.</li><li>La versión de Revit y las familias o plantillas que se utilizarán.</li><li>Una instancia de automatización/MCP compatible, instalada y conectada al programa.</li><li>Revisión del modelo y de las láminas antes de considerarlas documentación válida.</li></ol>
 <div class="disclaimer"><strong>Importante sobre MCP:</strong> Autodesk publica un servidor MCP oficial para Revit 2027.2 en Technical Preview. La documentación indica conexión local y clientes de IA compatibles con MCP, como Claude Desktop y Cursor. No debemos prometer que ese servidor se conecta directamente a ChatGPT sin comprobar un puente o cliente compatible. Las herramientas de escritura pueden modificar el modelo, por eso conviene trabajar con copias y revisar los cambios.</div>
 <div class="reference-links"><a href="https://help.autodesk.com/view/ADSKMCP/ENU/?guid=ADSKMCP_RevitMcp_revit_mcp_server_html" target="_blank" rel="noopener">Documentación oficial Autodesk · Revit MCP ↗</a><a href="https://help.autodesk.com/view/ADSKMCP/ENU/?guid=ADSKMCP_RevitMcp_setting_up_revit_mcp_server_html" target="_blank" rel="noopener">Configuración del servidor MCP ↗</a></div>
+
+<section class="inventor-section" id="inventor">
+<p class="eyebrow">Segunda ruta · Diseño mecánico y fabricación</p>
+<h1>Del croquis a Inventor</h1>
+<p class="intro">El mismo enfoque de trabajo, aplicado al diseño de piezas y conjuntos mecánicos: interpretar medidas, construir geometría paramétrica, revisar el modelo y preparar planos para fabricación.</p>
+<div class="inventor-banner">
+<article class="paper">
+<p class="eyebrow">La propuesta</p>
+<h2>Un croquis acotado puede convertirse en una pieza 3D editable.</h2>
+<p>Partimos de una fotografía o escaneo. Identificamos cotas, diámetros, espesores, radios, referencias y tolerancias disponibles. Antes de modelar, se aclaran las medidas dudosas y se acuerda el sistema de referencia.</p>
+<p>Con Inventor abierto en la PC, un servidor MCP local puede transmitir operaciones al programa mediante su API. La IA propone la secuencia; el usuario revisa y confirma los cambios.</p>
+</article>
+<figure class="inventor-visual">
+<svg viewBox="0 0 620 370" role="img" aria-label="Esquema de una pieza mecánica con cotas y modelo tridimensional">
+<rect x="5" y="5" width="610" height="360" rx="5" fill="#fbfcfa" stroke="#d7dfd8"/>
+<g transform="translate(32 48)" stroke="#3f5144" stroke-width="2" fill="none">
+<rect x="15" y="35" width="185" height="120"/><circle cx="108" cy="95" r="34"/><circle cx="108" cy="95" r="12"/>
+<path d="M15 18H200 M15 10v16 M200 10v16 M0 35V155 M-7 35h14 M-7 155h14"/>
+<path d="M108 61v68 M74 95h68" stroke-dasharray="5 4"/>
+</g>
+<g fill="#526052" font-family="Arial" font-size="14"><text x="78" y="35">Vista frontal</text><text x="88" y="225">Ø 30</text><text x="92" y="80">Ø 10</text><text x="86" y="19">80 mm</text></g>
+<g transform="translate(335 62)" stroke="#405444" stroke-width="2">
+<path d="M25 105 150 38 260 100 135 168Z" fill="#dce8df"/>
+<path d="M25 105V205l110 64V168Z" fill="#b9cbbb"/>
+<path d="M135 168v101l125-69V100Z" fill="#e9f0eb"/>
+<path d="M83 74 147 40 204 73 139 108Z" fill="#fbfcfa"/>
+<path d="M83 74v50l56 33v-49Z" fill="#cbd9ce"/>
+<path d="M139 108v49l65-35V73Z" fill="#e8eee9"/>
+<ellipse cx="139" cy="94" rx="19" ry="10" fill="#a3b8a7"/>
+<path d="M139 94v45 M120 94v-20 M158 94v-20" fill="none" stroke-dasharray="4 3"/>
+</g>
+<g fill="#526052" font-family="Arial" font-size="14"><text x="50" y="300">Croquis con cotas</text><text x="390" y="300">Modelo paramétrico</text></g>
+<path d="M255 170h45m-10-8 10 8-10 8" stroke="#9a704e" stroke-width="2" fill="none"/>
+</svg>
+<figcaption>Esquema didáctico: interpretación de un croquis y transformación en una pieza 3D. No es una captura de Inventor ni un diseño listo para fabricar.</figcaption>
+</figure>
+</div>
+<h2>Qué permite automatizar el MCP elegido</h2>
+<p>Para esta ruta se toma como referencia <strong>ipt-mcp de BIMwright</strong>, un proyecto de código abierto que conecta un cliente MCP con la API nativa de Autodesk Inventor. El repositorio documenta herramientas para croquis, operaciones de modelado, parámetros, ensamblajes y exportación. El alcance exacto depende de la versión publicada y de los módulos habilitados.</p>
+<div class="inventor-grid">
+<article>
+<figure class="inventor-visual">
+<svg viewBox="0 0 340 190" role="img" aria-label="Perfil 2D y extrusión de una pieza"><g stroke="#405444" stroke-width="2" fill="none"><path d="M28 130V65h65v-25h55v90Z"/><path d="M28 130 92 165h116l-60-35Z" fill="#dce8df"/><path d="M148 40 208 75v90l-60-35Z" fill="#b9cbbb"/><path d="M93 65 153 100 208 75 148 40Z" fill="#eef3ef"/></g><g fill="#526052" font-size="12"><text x="20" y="22">Perfil 2D</text><text x="220" y="110">Extrusión</text></g></svg>
+</figure>
+<h3>1. Croquis y operaciones</h3>
+<p>Crear perfiles 2D, restricciones y cotas; extruir, revolucionar, perforar, vaciar, redondear, achaflanar y repetir operaciones.</p>
+</article>
+<article>
+<figure class="inventor-visual">
+<svg viewBox="0 0 340 190" role="img" aria-label="Conjunto mecánico con componentes separados"><g stroke="#405444" stroke-width="2"><path d="M38 80h65v55H38Z" fill="#dce8df"/><path d="M38 80l30-20h65l-30 20Z" fill="#eef3ef"/><path d="M103 80l30-20v55l-30 20Z" fill="#b9cbbb"/><path d="M190 45h48v95h-48Z" fill="#dce8df"/><path d="M190 45l24-16h48l-24 16Z" fill="#eef3ef"/><path d="M238 45l24-16v95l-24 16Z" fill="#b9cbbb"/><path d="M136 96h36m-9-8 9 8-9 8" fill="none"/><path d="M215 150v20" fill="none" stroke-dasharray="4 3"/></g><g fill="#526052" font-size="12"><text x="26" y="180">Piezas y subconjuntos</text></g></svg>
+</figure>
+<h3>2. Ensambles</h3>
+<p>Consultar ocurrencias, organizar componentes, ubicar piezas y revisar relaciones de conjunto según las herramientas habilitadas.</p>
+</article>
+<article>
+<figure class="inventor-visual">
+<svg viewBox="0 0 340 190" role="img" aria-label="Plano mecánico con vistas, cotas y cuadro de materiales"><rect x="15" y="12" width="310" height="166" fill="#fff" stroke="#405444" stroke-width="2"/><g stroke="#405444" fill="none" stroke-width="2"><rect x="35" y="35" width="115" height="65"/><circle cx="93" cy="67" r="19"/><rect x="177" y="35" width="125" height="65"/><path d="M185 90V55l48-20 60 20v35Z"/><rect x="35" y="117" width="115" height="42"/><path d="M180 118h122M180 130h122M180 142h122M225 118v41M270 118v41"/></g><g fill="#526052" font-size="10"><text x="38" y="28">VISTA</text><text x="180" y="28">CORTE</text><text x="183" y="171">LISTA DE PIEZAS</text></g></svg>
+</figure>
+<h3>3. Planos y exportación</h3>
+<p>Crear hojas y vistas, cortes, cotas, anotaciones, tablas y exportaciones. Las herramientas de dibujo documentadas están orientadas a Inventor 2027 y requieren verificar su disponibilidad por versión.</p>
+</article>
+</div>
+<h2>Ejemplo visual publicado por el proyecto</h2>
+<figure class="inventor-visual">
+<a href="https://raw.githubusercontent.com/bimwright/ipt-mcp/master/.github/assets/showcase/inventor-assembly-drawing.png" target="_blank" rel="noopener">
+<img src="https://raw.githubusercontent.com/bimwright/ipt-mcp/master/.github/assets/showcase/inventor-assembly-drawing.png" alt="Ejemplo de plano de conjunto mecánico realizado en Autodesk Inventor con ayuda de ipt-mcp" loading="lazy">
+</a>
+<figcaption>Ejemplo real publicado por el repositorio ipt-mcp: lámina de conjunto creada y revisada en Inventor 2027 con asistencia de un agente. Es una muestra del resultado, no un archivo editable ni una aprobación para fabricación. Fuente: BIMwright / ipt-mcp.</figcaption>
+</figure>
+<h2>Ficha técnica del puente MCP</h2>
+<div class="inventor-specs">
+<article class="paper"><h3>Arquitectura de conexión</h3><ul>
+<li><strong>Servidor MCP:</strong> proceso local que habla MCP por entrada/salida estándar (stdio).</li>
+<li><strong>Complemento de Inventor:</strong> add-in cargado dentro de Inventor.exe.</li>
+<li><strong>Comunicación interna:</strong> TCP local para Inventor 2022–2024; canal con nombre para 2025–2027.</li>
+<li><strong>API:</strong> Autodesk Inventor API / COM, ejecutada en el hilo principal de Inventor.</li>
+<li><strong>Unidades:</strong> longitudes en milímetros y ángulos en grados en las herramientas.</li>
+<li><strong>Seguridad:</strong> conexión local autenticada; las escrituras requieren identificar y confirmar el documento de destino.</li>
+</ul></article>
+<article class="paper"><h3>Versiones y compatibilidad</h3><ul>
+<li><strong>Inventor 2022, 2023 y 2024:</strong> destino .NET Framework 4.8; transporte TCP local.</li>
+<li><strong>Inventor 2025 y 2026:</strong> destino .NET 8 para Windows; canal con nombre.</li>
+<li><strong>Inventor 2027:</strong> destino .NET 10 para Windows; canal con nombre.</li>
+<li>El instalador publicado y los complementos incluidos pueden cubrir menos versiones que el código fuente.</li>
+<li>El repositorio indica que el paquete de instalación de la versión documentada incluye Inventor 2025 y 2027; otras versiones requieren compilar el complemento con las referencias de Inventor correspondientes.</li>
+</ul></article>
+</div>
+<div class="inventor-note"><strong>Importante si usamos Inventor 2023:</strong> el proyecto declara compatibilidad de código con 2023, pero el instalador publicado no incluye necesariamente ese complemento ya compilado. Para esa versión hay que preparar el add-in con las bibliotecas de interoperabilidad instaladas en la PC y probarlo localmente. No conviene ejecutar un instalador de otra versión ni copiar DLL al azar.</div>
+<h2>Cómo sería el trabajo desde el croquis</h2>
+<div class="workflow">
+<article><h3>Medir e interpretar</h3><p>Identificar cotas, diámetros, radios, espesores, unidades, tolerancias y referencias.</p></article>
+<article><h3>Definir la estrategia</h3><p>Elegir plano de origen, geometría base, restricciones y secuencia de operaciones.</p></article>
+<article><h3>Modelar y ajustar</h3><p>Crear la pieza paramétrica y cambiar medidas mediante parámetros, con revisión en pantalla.</p></article>
+<article><h3>Documentar y exportar</h3><p>Preparar vistas y planos; exportar STEP, STL o DXF cuando corresponda y verificar el resultado.</p></article>
+</div>
+<h2>Qué necesitamos en la computadora</h2>
+<ol>
+<li>Windows y una instalación licenciada de Autodesk Inventor de la versión compatible.</li>
+<li>Inventor abierto y el documento correcto seleccionado.</li>
+<li>El complemento/add-in de ipt-mcp compilado para esa versión y el servidor MCP local.</li>
+<li>Un cliente compatible con MCP (por ejemplo, Codex, Cursor o Cline) configurado para iniciar el servidor local.</li>
+<li>Una copia de seguridad del archivo antes de las primeras pruebas y revisión humana de cada operación.</li>
+</ol>
+<div class="inventor-note"><strong>Conexión con ChatGPT:</strong> ipt-mcp está diseñado para clientes MCP locales por stdio. Eso no significa que ChatGPT en el celular o en la nube pueda abrir directamente un proceso de Windows. Para usarlo desde ChatGPT directamente haría falta una pasarela remota compatible y segura; como primera prueba, el camino más directo es un cliente local en la misma PC que Inventor. No se debe publicar el puerto local de Inventor en Internet.</div>
+<div class="inventor-links"><a href="https://github.com/bimwright/ipt-mcp" target="_blank" rel="noopener">Repositorio ipt-mcp · BIMwright ↗</a><a href="https://github.com/bimwright/ipt-mcp/releases/latest" target="_blank" rel="noopener">Versiones e instaladores ↗</a><a href="https://github.com/bimwright/ipt-mcp/blob/master/ARCHITECTURE.md" target="_blank" rel="noopener">Arquitectura técnica ↗</a></div>
+</section>
+
 <article class="paper"><p class="eyebrow">Actividad para el aula</p><h2>Del croquis al BIM: primera práctica</h2><p>Elegí una planta sencilla. Marcá qué información está confirmada, qué falta y qué no puede deducirse. Antes de modelar, prepará una tabla de ambientes, medidas y aberturas. Después compará el modelo con el croquis y explicá cualquier diferencia.</p><a class="button" href="consultas.html">Consultar sobre esta práctica →</a></article>
 <p style="margin-top:28px"><a href="ia.html">← IA aplicada al dibujo</a> · <a href="index.html">Inicio del aula</a></p>
 </section></main>
