@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Del croquis a Revit e Inventor: modelado BIM, diseño mecánico, automatización MCP y documentación técnica con IA.">
-<meta name="theme-color" content="#506952"><title>Del croquis a Revit e Inventor · Dibujo Técnico + CAD</title>
+<meta name="theme-color" content="#506952"><title>Del croquis a Revit, Inventor y FreeCAD · Dibujo Técnico + CAD</title>
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css">
 <style>
 .revit-hero{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin:0 0 36px}
@@ -44,7 +44,19 @@
 @media(max-width:800px){.inventor-banner{grid-template-columns:1fr}.inventor-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.inventor-grid,.inventor-specs{grid-template-columns:1fr}}
 
-</style>
+
+.freecad-section{margin:58px 0 44px;padding:34px 0;border-top:3px solid var(--green)}
+.freecad-banner{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;margin:22px 0}
+.freecad-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:22px 0}
+.freecad-grid article{border:1px solid var(--line);padding:20px;background:#fff}
+.freecad-grid h3{font-size:21px;margin:10px 0}
+.freecad-grid p,.freecad-grid li{font-size:14px;color:var(--muted)}
+.freecad-prompt{background:#eef3ee;border:1px solid #d4dfd5;padding:20px;margin:22px 0;white-space:normal}
+.freecad-prompt pre{white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.6 inherit;margin:12px 0 0}
+.freecad-note{border-left:3px solid #9a7a37;background:#f8f5ec;padding:17px 20px;font-size:14px;margin:22px 0}
+.freecad-links{display:flex;flex-wrap:wrap;gap:16px;margin:16px 0 26px}
+@media(max-width:800px){.freecad-banner{grid-template-columns:1fr}.freecad-grid{grid-template-columns:1fr}}
+\n</style>
 </head>
 <body id="top" data-page="revit">
 <a class="skip" href="#contenido">Saltar al contenido</a>
@@ -55,7 +67,7 @@
 <a class="admin-link" href="administrar.html"><svg viewBox="0 0 46 46" aria-hidden="true"><circle cx="21" cy="21" r="6"/><path d="m18 4 6 0 1 6 5 2 5-3 4 5-4 5 0 5 4 4-4 5-5-2-5 2-1 6h-6l-1-6-5-2-5 2-4-5 4-4v-5l-4-5 4-5 5 3 5-2z"/></svg><span>Administrar</span></a>
 </div></header>
 <main id="contenido">
-<section class="page-heading wrap"><a class="back" href="ia.html">← Volver a IA aplicada al dibujo</a><p class="eyebrow">Del papel al modelo digital</p><h1>Del croquis a Revit e Inventor</h1><p class="intro">Dos rutas de trabajo con IA: metodología BIM para proyectos de arquitectura con Revit y diseño mecánico paramétrico con Inventor. En ambos casos partimos de un croquis, verificamos las medidas y preparamos documentación técnica revisable.</p></section>
+<section class="page-heading wrap"><a class="back" href="ia.html">← Volver a IA aplicada al dibujo</a><p class="eyebrow">Del papel al modelo digital</p><h1>Del croquis a Revit, Inventor y FreeCAD</h1><p class="intro">Tres rutas para pasar del croquis al modelo digital: arquitectura BIM con Revit, diseño mecánico con Inventor y modelado paramétrico de construcción y mecánica con FreeCAD. Interpretamos, verificamos y documentamos antes de dar por válido un resultado.</p></section>
 <section class="wrap">
 <div class="revit-hero">
 <article class="paper"><p class="eyebrow">La idea central</p><h2>Vos hacés el croquis. La IA ayuda a convertirlo en un proyecto documentado.</h2>
@@ -206,6 +218,160 @@
 <div class="inventor-links"><a href="https://github.com/bimwright/ipt-mcp" target="_blank" rel="noopener">Repositorio ipt-mcp · BIMwright ↗</a><a href="https://github.com/bimwright/ipt-mcp/releases/latest" target="_blank" rel="noopener">Versiones e instaladores ↗</a><a href="https://github.com/bimwright/ipt-mcp/blob/master/ARCHITECTURE.md" target="_blank" rel="noopener">Arquitectura técnica ↗</a></div>
 </section>
 
+
+
+<section class="freecad-section" id="freecad">
+<p class="eyebrow">Tercera ruta · Modelado paramétrico abierto</p>
+<h2>Del croquis a FreeCAD: construcción y mecánica</h2>
+<p class="intro">FreeCAD es un modelador 3D paramétrico de código abierto. Podemos utilizarlo tanto para piezas mecánicas como para proyectos de arquitectura y construcción. La diferencia no la decide el programa por sí solo: la definimos al interpretar tu pedido, el tipo de geometría, las unidades y la documentación que necesitamos.</p>
+<div class="freecad-banner">
+<article class="paper">
+<p class="eyebrow">La idea central</p>
+<h2>Vos aportás el croquis y las decisiones. La IA interpreta y organiza. FreeCAD construye el modelo editable.</h2>
+<p>El trabajo comienza identificando qué estamos diseñando. Si hablamos de ambientes, muros, niveles, fundaciones, columnas o losas, usamos el perfil de construcción. Si hablamos de piezas, ejes, agujeros, soportes, engranajes o conjuntos, usamos el perfil mecánico.</p>
+<p>Antes de modificar el documento, la IA debe explicitar qué entendió, qué datos faltan y qué operaciones propone. Vos confirmás las decisiones importantes.</p>
+</article>
+<figure class="inventor-visual">
+<svg viewBox="0 0 620 290" role="img" aria-label="Esquema de las dos rutas de modelado en FreeCAD">
+<rect x="8" y="8" width="604" height="274" rx="5" fill="#f8faf8" stroke="#d7dfd8"/>
+<rect x="205" y="28" width="210" height="52" rx="5" fill="#e7eee8" stroke="#526952" stroke-width="2"/>
+<text x="310" y="59" text-anchor="middle" fill="#405444" font-size="18" font-family="Arial">Croquis + medidas</text>
+<path d="M310 80v35H160v30m150-30h150v30" fill="none" stroke="#9a704e" stroke-width="2"/>
+<path d="M153 137l7 8 7-8m143 0 7 8 7-8" fill="none" stroke="#9a704e" stroke-width="2"/>
+<rect x="35" y="150" width="250" height="86" rx="5" fill="#dce8df" stroke="#405444" stroke-width="2"/>
+<rect x="335" y="150" width="250" height="86" rx="5" fill="#e8edf2" stroke="#52677d" stroke-width="2"/>
+<g fill="#405444" font-family="Arial" text-anchor="middle"><text x="160" y="181" font-size="19">Construcción</text><text x="160" y="207" font-size="13">Muros · ejes · columnas · losas</text></g>
+<g fill="#40516a" font-family="Arial" text-anchor="middle"><text x="460" y="181" font-size="19">Mecánica</text><text x="460" y="207" font-size="13">Piezas · agujeros · conjuntos</text></g>
+<path d="M160 236v22h300v-22" fill="none" stroke="#9a704e" stroke-width="2"/>
+<text x="310" y="274" text-anchor="middle" fill="#405444" font-size="13" font-family="Arial">Modelo paramétrico · revisión · planos · exportación</text>
+</svg>
+<figcaption>Esquema de las dos rutas de trabajo. La selección depende del objetivo del proyecto, no de una detección automática infalible.</figcaption>
+</figure>
+</div>
+<h2>¿Cómo sabe la IA si el proyecto es de construcción o mecánica?</h2>
+<p>No lo debe adivinar por una palabra aislada. Primero analiza el objetivo, los elementos nombrados, las unidades y el resultado solicitado. Si hay señales mezcladas o falta contexto, pregunta antes de crear geometría.</p>
+<div class="freecad-grid">
+<article>
+<span class="stage">Perfil A · Construcción</span>
+<h3>Arquitectura, obra y estructura</h3>
+<ul>
+<li>Plantas, ambientes, ejes, cotas generales y parciales.</li>
+<li>Muros, puertas, ventanas, niveles y cubiertas.</li>
+<li>Fundaciones, columnas, vigas y losas.</li>
+<li>Instalaciones y detalles constructivos, cuando se definan.</li>
+<li>Vistas, cortes, fachadas, cómputos y láminas.</li>
+</ul>
+<p><strong>Entorno de trabajo:</strong> herramientas BIM/Arch y Draft para elementos constructivos; Sketcher y Part/Part Design cuando se necesiten geometrías o componentes paramétricos específicos; TechDraw para documentación 2D.</p>
+</article>
+<article>
+<span class="stage">Perfil B · Mecánica</span>
+<h3>Piezas, mecanismos y fabricación</h3>
+<ul>
+<li>Piezas prismáticas, cilíndricas y perfiles.</li>
+<li>Perforaciones, vaciados, roscas y patrones.</li>
+<li>Restricciones, cotas y parámetros editables.</li>
+<li>Conjuntos, uniones y comprobación de interferencias.</li>
+<li>Planos de fabricación y exportación STEP o STL.</li>
+</ul>
+<p><strong>Entorno de trabajo:</strong> Sketcher para perfiles y restricciones; Part Design para cuerpos y operaciones; Part para geometría; Assembly cuando corresponda; TechDraw para planos.</p>
+</article>
+</div>
+<h2>Ejemplo de construcción: de la planta a la estructura</h2>
+<ol>
+<li><strong>Leer y redibujar la planta:</strong> reconocer cotas, espesores, aberturas, ejes y niveles. No completar medidas que no estén dadas.</li>
+<li><strong>Organizar el modelo:</strong> crear niveles y elementos arquitectónicos identificados y editables.</li>
+<li><strong>Incorporar estructura según indicaciones:</strong> ubicar fundaciones, columnas, vigas y losas solo cuando tengamos sus dimensiones, posiciones y criterios definidos.</li>
+<li><strong>Documentar:</strong> generar vistas, cortes, detalles, planillas y cómputos preliminares para revisar.</li>
+</ol>
+<div class="paper">
+<h3>Ejemplo de instrucción estructural</h3>
+<p>“Ubicá la columna C1 entre los ejes A-1. Su sección indicada es de 20 × 30 cm y continúa desde la fundación hasta planta alta. Mostrame su ubicación en planta y en 3D, identificá el elemento como C1 y dejá visible cualquier dato que todavía falte”.</p>
+<p>Otro ejemplo: “Representá una losa maciza de 12 cm. Dibujá como referencia barras Ø8 cada 15 cm en ambas direcciones, pero no calcules ni declares válida la armadura: dejá la propuesta pendiente de verificación estructural”.</p>
+</div>
+<h2>Ejemplo de mecánica: una pieza con medidas conocidas</h2>
+<p>Podemos comenzar con una pieza didáctica de 40 × 40 × 40 mm y un hueco cuadrado de 20 × 20 mm. Primero se define la orientación y la posición del hueco; después se crea el croquis, se restringe, se extruye y se comprueba la medida final. El archivo nativo queda editable.</p>
+<div class="freecad-grid">
+<article><h3>1. Croquis y restricciones</h3><p>Definir geometría, cotas, relaciones y plano de referencia. Detectar grados de libertad o restricciones contradictorias.</p></article>
+<article><h3>2. Operaciones paramétricas</h3><p>Crear sólidos, extrusiones, revoluciones, vaciados, perforaciones, redondeos y patrones según el diseño.</p></article>
+<article><h3>3. Revisar el modelo</h3><p>Comprobar dimensiones, árbol de operaciones, geometría válida, volumen y orientación.</p></article>
+<article><h3>4. Documentar y exportar</h3><p>Preparar vistas y cotas en TechDraw; guardar FCStd y exportar STEP, STL o DXF según el uso.</p></article>
+</div>
+<h2>Flujo de trabajo con MCP</h2>
+<div class="workflow">
+<article><h3>1. Preparar</h3><p>Instalar FreeCAD, abrirlo y crear una carpeta de proyecto con copia de seguridad.</p></article>
+<article><h3>2. Conectar</h3><p>Configurar un servidor MCP compatible con la versión instalada y un cliente que pueda iniciarlo.</p></article>
+<article><h3>3. Interpretar y modelar</h3><p>La IA lee el pedido, consulta datos faltantes y ejecuta operaciones autorizadas.</p></article>
+<article><h3>4. Verificar</h3><p>Inspeccionar el árbol, las medidas y las vistas; guardar el FCStd y exportar si corresponde.</p></article>
+</div>
+<h2>Instrucción permanente para trabajar conmigo</h2>
+<div class="freecad-prompt">
+<strong>Regla de trabajo · FreeCAD + IA + MCP</strong>
+<pre>Actuá como asistente de dibujo técnico y modelado paramétrico en FreeCAD.
+
+1. Antes de modelar, identificá el tipo de proyecto:
+   A) CONSTRUCCIÓN: plantas, ambientes, muros, aberturas,
+      ejes, niveles, fundaciones, columnas, vigas, losas
+      e instalaciones.
+   B) MECÁNICA: piezas, perfiles, agujeros, ejes,
+      soportes, mecanismos y conjuntos.
+
+2. Si el pedido no permite distinguir el perfil, preguntame.
+   No elijas ni cambies de perfil silenciosamente.
+
+3. Interpretá el croquis y separá:
+   - medidas confirmadas;
+   - medidas estimadas;
+   - datos faltantes;
+   - contradicciones o zonas ilegibles.
+
+4. Antes de ejecutar, explicá qué vas a crear y qué
+   operaciones realizarás. Pedí confirmación cuando una
+   decisión afecte dimensiones, ubicación o diseño.
+
+5. Usá unidades explícitas: mm para piezas mecánicas y
+   cm o m para construcción, indicando siempre la unidad.
+
+6. Construí un modelo ordenado, editable y paramétrico.
+   Nombrá los objetos y organizalos en el árbol del proyecto.
+
+7. No inventes cotas, materiales, cargas ni armaduras.
+   En construcción, no presentes cálculos estructurales
+   como válidos sin cálculo y revisión profesional.
+
+8. Después de modelar, verificá medidas, geometría,
+   restricciones, árbol de operaciones y vistas.
+
+9. Guardá el archivo nativo .FCStd. Exportá STEP, STL,
+   DXF o PDF solo cuando corresponda y lo solicite.
+
+10. Informá qué se creó, qué quedó pendiente y qué debe
+    revisar una persona antes de utilizar el resultado.
+
+Si el MCP no está conectado, prepará instrucciones o
+scripts para ejecutar localmente, pero no afirmes que
+modificaste el archivo.</pre>
+</div>
+<h2>Qué necesitamos en la computadora</h2>
+<ol>
+<li>Instalar FreeCAD desde su sitio oficial y comprobar que inicia correctamente.</li>
+<li>Identificar la versión exacta instalada y el sistema operativo.</li>
+<li>Elegir un servidor MCP cuyo estado, herramientas y compatibilidad hayan sido comprobados.</li>
+<li>Configurar un cliente MCP compatible en la misma computadora y probar primero operaciones de lectura.</li>
+<li>Hacer una prueba sencilla en un archivo nuevo antes de trabajar sobre un proyecto real.</li>
+</ol>
+<div class="freecad-note"><strong>Importante sobre la conexión:</strong> FreeCAD dispone de una API Python y existen proyectos comunitarios que implementan puentes MCP. No todos están igual de maduros ni ofrecen las mismas herramientas. Un servidor puede permitir inspeccionar documentos y exportar, pero no necesariamente modelar arquitectura completa. Hay que comprobar versión, funciones, permisos y cliente compatible. No debemos suponer que ChatGPT en el celular puede controlar directamente un proceso local de Windows. Para las primeras pruebas, trabajaremos localmente y sin exponer puertos a Internet. Las herramientas que ejecutan scripts pueden modificar archivos: usar copias y confirmar las operaciones.</div>
+<div class="freecad-links">
+<a href="https://www.freecad.org/downloads.php" target="_blank" rel="noopener">Descargar FreeCAD · sitio oficial ↗</a>
+<a href="https://github.com/neka-nat/freecad-mcp" target="_blank" rel="noopener">FreeCAD MCP · proyecto comunitario ↗</a>
+<a href="https://github.com/tspspi/mcpFreeCAD" target="_blank" rel="noopener">mcpFreeCAD · alternativa comunitaria ↗</a>
+<a href="https://github.com/FreeCAD/FreeCAD" target="_blank" rel="noopener">Código fuente oficial de FreeCAD ↗</a>
+</div>
+<article class="paper">
+<p class="eyebrow">Primera práctica · empezar de cero</p>
+<h3>Prueba inicial: una pieza y una planta</h3>
+<p>Primero modelaremos el cubo de 40 mm con hueco de 20 mm para comprobar croquis, restricciones, extrusión y guardado FCStd. Después probaremos una planta arquitectónica sencilla: redibujar muros y aberturas, verificar cotas y organizar niveles. Así comprobamos por separado los dos perfiles antes de avanzar a un proyecto completo.</p>
+</article>
+</section>
 
 <section class="inventor-section" id="foto-a-modelo-3d">
 <p class="eyebrow">Herramienta de inteligencia artificial · Modelado 3D</p>
