@@ -250,32 +250,58 @@
 </div>
 <h2>¿Cómo sabe la IA si el proyecto es de construcción o mecánica?</h2>
 <p>No lo debe adivinar por una palabra aislada. Primero analiza el objetivo, los elementos nombrados, las unidades y el resultado solicitado. Si hay señales mezcladas o falta contexto, pregunta antes de crear geometría.</p>
-<div class="freecad-grid">
+<div class="freecad-grid freecad-areas">
 <article>
-<span class="stage">Perfil A · Construcción</span>
-<h3>Arquitectura, obra y estructura</h3>
+<span class="stage">Área 01 · Construcción</span>
+<h3>Arquitectura, obra y estructuras</h3>
 <ul>
-<li>Plantas, ambientes, ejes, cotas generales y parciales.</li>
-<li>Muros, puertas, ventanas, niveles y cubiertas.</li>
+<li>Plantas, ambientes, ejes, cotas y niveles.</li>
+<li>Muros, puertas, ventanas y cubiertas.</li>
 <li>Fundaciones, columnas, vigas y losas.</li>
-<li>Instalaciones y detalles constructivos, cuando se definan.</li>
-<li>Vistas, cortes, fachadas, cómputos y láminas.</li>
+<li>Instalaciones y detalles constructivos.</li>
+<li>Vistas, cortes, fachadas y cómputos preliminares.</li>
 </ul>
-<p><strong>Entorno de trabajo:</strong> herramientas BIM/Arch y Draft para elementos constructivos; Sketcher y Part/Part Design cuando se necesiten geometrías o componentes paramétricos específicos; TechDraw para documentación 2D.</p>
+<p><strong>Objetivo:</strong> pasar del croquis a un modelo constructivo organizado y documentado. Las decisiones estructurales requieren datos y revisión profesional.</p>
 </article>
 <article>
-<span class="stage">Perfil B · Mecánica</span>
-<h3>Piezas, mecanismos y fabricación</h3>
+<span class="stage">Área 02 · Mecánica</span>
+<h3>Piezas y conjuntos mecánicos</h3>
 <ul>
 <li>Piezas prismáticas, cilíndricas y perfiles.</li>
-<li>Perforaciones, vaciados, roscas y patrones.</li>
-<li>Restricciones, cotas y parámetros editables.</li>
-<li>Conjuntos, uniones y comprobación de interferencias.</li>
-<li>Planos de fabricación y exportación STEP o STL.</li>
+<li>Agujeros, vaciados, roscas y patrones.</li>
+<li>Cotas, restricciones y parámetros editables.</li>
+<li>Ejes, soportes, mecanismos y ensamblajes.</li>
+<li>Planos de piezas y conjuntos.</li>
 </ul>
-<p><strong>Entorno de trabajo:</strong> Sketcher para perfiles y restricciones; Part Design para cuerpos y operaciones; Part para geometría; Assembly cuando corresponda; TechDraw para planos.</p>
+<p><strong>Objetivo:</strong> diseñar piezas y mecanismos con geometría paramétrica, medidas verificables y documentación técnica.</p>
+</article>
+<article>
+<span class="stage">Área 03 · Impresión 3D</span>
+<h3>Modelado y preparación de mallas</h3>
+<ul>
+<li>Modelos sólidos y piezas personalizadas.</li>
+<li>Geometrías con medidas y espesores definidos.</li>
+<li>Comprobación de sólidos, huecos y paredes.</li>
+<li>Preparación y revisión de mallas.</li>
+<li>Exportación STL y 3MF cuando corresponda.</li>
+</ul>
+<p><strong>Objetivo:</strong> obtener piezas imprimibles y revisar escala, orientación, espesores y geometría antes de llevarlas al laminador.</p>
+</article>
+<article>
+<span class="stage">Área 04 · Fabricación y exportación</span>
+<h3>Planos, CNC e intercambio de archivos</h3>
+<ul>
+<li>Vistas, cortes, cotas y detalles en TechDraw.</li>
+<li>Planos y documentación en PDF.</li>
+<li>Archivos STEP para intercambio CAD.</li>
+<li>DXF para perfiles y procesos 2D.</li>
+<li>Geometría y documentación para mecanizado CNC.</li>
+</ul>
+<p><strong>Objetivo:</strong> preparar la documentación y los formatos adecuados para compartir, fabricar o continuar el trabajo en otro programa.</p>
 </article>
 </div>
+<h2>Cómo se relacionan las cuatro áreas</h2>
+<p>Un mismo proyecto puede pasar por más de un área. Por ejemplo, diseñamos una pieza en Mecánica, verificamos su geometría para Impresión 3D y después exportamos el archivo de fabricación. En Construcción, modelamos una obra y preparamos sus planos y documentación. Elegimos el recorrido según el resultado que necesitemos.</p>
 <h2>Ejemplo de construcción: de la planta a la estructura</h2>
 <ol>
 <li><strong>Leer y redibujar la planta:</strong> reconocer cotas, espesores, aberturas, ejes y niveles. No completar medidas que no estén dadas.</li>
